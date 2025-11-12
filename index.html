@@ -1,0 +1,508 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access to Safe Drinking Water Project</title>
+  <style>
+    :root{--blue:#007bff;--pink:#ff66b2;--yellow:#ffcc00;--card-bg:rgba(255,255,255,0.98);--muted:#333}
+    body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(135deg,var(--blue),var(--pink),var(--yellow));background-size:400% 400%;animation:move 10s infinite;color:var(--muted)}
+    @keyframes move{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    header{text-align:center;padding:22px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.25)}
+    h1{margin:0;font-size:1.9rem}
+    .container{max-width:1200px;margin:20px auto;background:var(--card-bg);border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,0.12)}
+    .icon-menu{display:flex;justify-content:space-around;flex-wrap:wrap;gap:12px;margin:16px 0}
+    .icon{width:100px;height:100px;background:#fff;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.12);transition:transform .2s}
+    .icon:hover{transform:translateY(-6px)}
+    .icon span{font-size:1.6rem}
+    section{display:none;position:fixed;inset:0;background:var(--card-bg);overflow:auto;padding:28px 34px;z-index:999}
+    section.active{display:block}
+    .close-btn{position:fixed;top:18px;right:22px;background:var(--blue);color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:1.4rem;cursor:pointer}
+    .days-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+    .day-card{background:#fff;border-radius:12px;padding:12px;border-left:8px solid var(--blue);box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .day-card.accent-pink{border-left-color:var(--pink)}
+    .day-card.accent-yellow{border-left-color:var(--yellow)}
+    .day-title{font-weight:800;margin-bottom:6px}
+    .day-images{display:flex;gap:8px}
+    .day-images img{width:calc(33% - 6px);height:90px;object-fit:cover;border-radius:8px;border:3px solid #fff}
+    .upload{margin-top:12px}
+    @media(max-width:700px){.icon{width:86px;height:86px}.day-images img{height:70px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Access to Safe Drinking Water (CSP Project)</h1>
+    <p style="margin:6px 0 0;color:#fff;font-weight:600">Team: E. Nikhil Sai Reddy · B. Vinayak Yadav · B. Balakrishna · B. Sukeer</p>
+  </header>  <div class="container">
+    <div class="icon-menu">
+      <div class="icon" onclick="showSection('intro')"><span>📘</span><small>Intro</small></div>
+      <div class="icon" onclick="showSection('week1')"><span>1️⃣</span><small>Week 1</small></div>
+      <div class="icon" onclick="showSection('week2')"><span>2️⃣</span><small>Week 2</small></div>
+      <div class="icon" onclick="showSection('week3')"><span>3️⃣</span><small>Week 3</small></div>
+      <div class="icon" onclick="showSection('week4')"><span>4️⃣</span><small>Week 4</small></div>
+      <div class="icon" onclick="showSection('week5')"><span>5️⃣</span><small>Week 5</small></div>
+      <div class="icon" onclick="showSection('week6')"><span>6️⃣</span><small>Week 6</small></div>
+      <div class="icon" onclick="showSection('conclusion')"><span>🏁</span><small>Conclusion</small></div>
+    </div><!-- INTRO -->
+<section id="intro">
+  <button class="close-btn" onclick="closeSection()">×</button>
+  <h2>Introduction</h2>
+  <p>This six-week CSP project improves access to safe drinking water in a rural village through community monitoring, household treatment and safe storage, source protection and behaviour-change campaigns. Below are daily reports for each week with photos and an option to add one image per week.</p>
+</section>
+
+<!-- WEEK 1 -->
+<section id="week1">
+  <button class="close-btn" onclick="closeSection()">×</button>
+  <h2>Week 1 — Planning & Baseline Survey (Daily)</h2>
+  <p>Initial visits, meetings, mapping and volunteer selection. Focus: prepare for field testing.</p>
+  <div class="days-grid">
+    <div class="day-card">
+      <div class="day-title">Day 1 — Village Intro & Meeting</div>
+      <p>Introduced the project to village leaders, explained objectives and planned schedule.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/4392153/pexels-photo-4392153.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="village meeting">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="meeting notes">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="leaders">
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-title">Day 2 — Water Point Mapping</div>
+      <p>Mapped handpumps, wells and piped points; recorded GPS and visible risks.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="handpump">
+        <img src="https://images.pexels.com/photos/337985/pexels-photo-337985.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="open well">
+        <img src="https://images.pexels.com/photos/3184314/pexels-photo-3184314.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="map notes">
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-title">Day 3 — Baseline Household Survey</div>
+      <p>Collected data on water sources, treatment habits and recent water-related illnesses.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="survey">
+        <img src="https://images.pexels.com/photos/3184190/pexels-photo-3184190.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="forms">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="data recording">
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-title">Day 4 — Volunteer Selection</div>
+      <p>Recruited 6 community volunteers, prioritizing women and youth for inclusivity.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="volunteers">
+        <img src="https://images.pexels.com/photos/4392153/pexels-photo-4392153.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="group">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="planning">
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-title">Day 5 — Kit Preparation</div>
+      <p>Checked water-testing kits, sample bottles and arranged transport for field activities.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/708934/pexels-photo-708934.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="kits">
+        <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="kit closeup">
+        <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="packing">
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-title">Day 6 — Community Notice</div>
+      <p>Posted the weekly schedule on the noticeboard and informed households of upcoming tests and demos.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="noticeboard">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="schedule">
+        <img src="https://images.pexels.com/photos/4392153/pexels-photo-4392153.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="info">
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-title">Day 7 — Week 1 Report</div>
+      <p>Compiled baseline findings and prepared materials for Week 2 field testing.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="report">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="summary">
+        <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="files">
+      </div>
+    </div>
+  </div>
+  <div class="upload"><label>Add one weekly picture: </label> <input type="file" accept="image/*"></div>
+</section>
+
+<!-- WEEK 2 -->
+<section id="week2">
+  <button class="close-btn" onclick="closeSection()">×</button>
+  <h2>Week 2 — Field Testing & Sample Collection (Daily)</h2>
+  <p>Collected water samples from various sources and performed field tests to evaluate water quality.</p>
+  <div class="days-grid">
+    <div class="day-card">
+      <div class="day-title">Day 1 — Training & Briefing</div>
+      <p>Briefed volunteers on safe sampling procedures and testing methods.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="training">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="briefing">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="discussion">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 2 — Sample Collection</div>
+      <p>Collected samples from borewells, handpumps and wells to check turbidity and pH levels.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/6476587/pexels-photo-6476587.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="sample">
+        <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="collection">
+        <img src="https://images.pexels.com/photos/337985/pexels-photo-337985.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="well">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 3 — Testing & Analysis</div>
+      <p>Tested water for physical and chemical parameters and documented results.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/708934/pexels-photo-708934.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="testing">
+        <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="record">
+        <img src="https://images.pexels.com/photos/619528/pexels-photo-619528.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="kit">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 4 — Repeat after rain</div>
+      <p>Retested sources after rainfall to check turbidity changes and record findings.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/373755/pexels-photo-373755.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="turbid water">
+        <img src="https://images.pexels.com/photos/375575/pexels-photo-375575.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="pond">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="team">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 5 — Community Feedback</div>
+      <p>Shared preliminary results with residents; collected observations about taste and smell.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/580071/pexels-photo-580071.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="discussion">
+        <img src="https://images.pexels.com/photos/33999/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200" alt="discussion 2">
+        <img src="https://images.pexels.com/photos/325221/pexels-photo-325221.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="notebook">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 6 — Advise precautions</div>
+      <p>Advised residents to avoid using turbid sources until treated and recommended safe alternatives.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/620760/pexels-photo-620760.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="storage jugs">
+        <img src="https://images.pexels.com/photos/258262/pexels-photo-258262.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="ladle storage">
+        <img src="https://images.pexels.com/photos/399321/pexels-photo-399321.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="household">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 7 — Weekly summary</div>
+      <p>Compiled week’s data and prepared for Week 3 household demonstrations.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="summary">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="report">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="volunteers">
+      </div>
+    </div>
+  </div>
+  <div class="upload"><label>Add one weekly picture: </label> <input type="file" accept="image/*"></div>
+</section>
+
+<!-- WEEK 3 -->
+<section id="week3">
+  <button class="close-btn" onclick="closeSection()">×</button>
+  <h2>Week 3 — Household Treatment & Safe Storage (Daily)</h2>
+  <p>Demonstrations of boiling, SODIS and chlorination; household visits to encourage safe storage.</p>
+  <div class="days-grid">
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 1 — Demonstration Setup</div>
+      <p>Set up demonstration area at school; prepared SODIS bottles and boiling station.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/450271/pexels-photo-450271.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="sodis bottles">
+        <img src="https://images.pexels.com/photos/40568/child-children-girl-happy-40568.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="children">
+        <img src="https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="setup">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 2 — Boiling Demo</div>
+      <p>Showed proper boiling duration and safe cooling practices to families.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="boiling">
+        <img src="https://images.pexels.com/photos/615679/pexels-photo-615679.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="audience">
+        <img src="https://images.pexels.com/photos/618965/pexels-photo-618965.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="cooling">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 3 — Chlorination Training</div>
+      <p>Explained safe dosage and handling of chlorine tablets; distributed sample tablets.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/4057742/pexels-photo-4057742.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="tablets">
+        <img src="https://images.pexels.com/photos/4057743/pexels-photo-4057743.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="mixing">
+        <img src="https://images.pexels.com/photos/4057744/pexels-photo-4057744.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="instructions">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 4 — Home Visits</div>
+      <p>Visited households to help them set up safe-storage containers and ladles.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/373882/pexels-photo-373882.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="home visit">
+        <img src="https://images.pexels.com/photos/325221/pexels-photo-325221.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="storage check">
+        <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="ladle">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 5 — Taste Feedback</div>
+      <p>Collected taste and acceptability feedback after households tried treatment methods.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184314/pexels-photo-3184314.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="survey">
+        <img src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="notes">
+        <img src="https://images.pexels.com/photos/33317/camera-old-vintage-typical-33317.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="feedback">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 6 — Reinforcement</div>
+      <p>Reinforced instructions for households facing difficulties and retaught SODIS steps.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/450271/pexels-photo-450271.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="sodis">
+        <img src="https://images.pexels.com/photos/40568/child-children-girl-happy-40568.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="helping kids">
+        <img src="https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="bottles">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 7 — Week 3 Wrap-up</div>
+      <p>Updated adoption logs and prepared notes for source protection activities next week.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="wrap-up">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="volunteers">
+        <img src="https://images.pexels.com/photos/4392153/pexels-photo-4392153.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="notes">
+      </div>
+    </div>
+  </div>
+  <div class="upload"><label>Add one weekly picture: </label> <input type="file" accept="image/*"></div>
+</section>
+
+<!-- WEEK 4 -->
+<section id="week4">
+  <button class="close-btn" onclick="closeSection()">×</button>
+  <h2>Week 4 — Source Protection & Rainwater Harvesting (Daily)</h2>
+  <p>Clean-up drives, fencing, small recharge pits and a school rain-harvest pilot to protect sources and boost supply.</p>
+  <div class="days-grid">
+    <div class="day-card accent-yellow">
+      <div class="day-title">Day 1 — Source Survey</div>
+      <p>Inspected wells and handpumps for litter, animal access and erosion.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/209289/pexels-photo-209289.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="well survey">
+        <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="mapping">
+        <img src="https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="notes">
+      </div>
+    </div>
+    <div class="day-card accent-yellow">
+      <div class="day-title">Day 2 — Clean-up Drive</div>
+      <p>Organised villagers to clear waste and desilt around the primary well.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="cleanup">
+        <img src="https://images.pexels.com/photos/1618005/pexels-photo-1618005.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="clearing">
+        <img src="https://images.pexels.com/photos/375576/pexels-photo-375576.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="desilting">
+      </div>
+    </div>
+    <div class="day-card accent-yellow">
+      <div class="day-title">Day 3 — Fencing & Signage</div>
+      <p>Installed fencing and signs to protect the well from animals and waste.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/1631052/pexels-photo-1631052.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="fence">
+        <img src="https://images.pexels.com/photos/353390/pexels-photo-353390.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="signage">
+        <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="clean area">
+      </div>
+    </div>
+    <div class="day-card accent-yellow">
+      <div class="day-title">Day 4 — Rainwater Barrel Pilot</div>
+      <p>Installed rooftop diverter and barrel at school to collect rainwater for gardening.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/270955/pexels-photo-270955.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="rain barrel">
+        <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="rooftop">
+        <img src="https://images.pexels.com/photos/209289/pexels-photo-209289.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="garden">
+      </div>
+    </div>
+    <div class="day-card accent-yellow">
+      <div class="day-title">Day 5 — Planting & Mulch</div>
+      <p>Planted shrubs and applied mulch to reduce runoff near sources.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="planting">
+        <img src="https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="mulch">
+        <img src="https://images.pexels.com/photos/1060428/pexels-photo-1060428.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="saplings">
+      </div>
+    </div>
+    <div class="day-card accent-yellow">
+      <div class="day-title">Day 6 — School Demo</div>
+      <p>Explained how collected rainwater can be used for gardening and cleaning at school.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/256431/pexels-photo-256431.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="school demo">
+        <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="students">
+        <img src="https://images.pexels.com/photos/209289/pexels-photo-209289.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="garden usage">
+      </div>
+    </div>
+    <div class="day-card accent-yellow">
+      <div class="day-title">Day 7 — Report & Handover</div>
+      <p>Compiled week photos and notes and handed over simple maintenance tips to caretakers.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="handover">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="meeting">
+        <img src="https://images.pexels.com/photos/4392153/pexels-photo-4392153.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="notes">
+      </div>
+    </div>
+  </div>
+  <div class="upload"><label>Add one weekly picture: </label> <input type="file" accept="image/*"></div>
+</section>
+
+<!-- WEEK 5 -->
+<section id="week5">
+  <button class="close-btn" onclick="closeSection()">×</button>
+  <h2>Week 5 — Awareness Campaign & Behaviour Change (Daily)</h2>
+  <p>Poster campaigns, street plays, quizzes and door-to-door outreach to encourage safe-water habits.</p>
+  <div class="days-grid">
+    <div class="day-card">
+      <div class="day-title">Day 1 — Posters & Pamphlets</div>
+      <p>Designed and distributed local-language posters urging boil/store/protect practices.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/209289/pexels-photo-209289.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="poster">
+        <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="pamphlet">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="design">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 2 — Street Play</div>
+      <p>Students performed a street play showing risks from dirty water and prevention tips.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/374746/pexels-photo-374746.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="play">
+        <img src="https://images.pexels.com/photos/374707/pexels-photo-374707.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="audience">
+        <img src="https://images.pexels.com/photos/374746/pexels-photo-374746.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="children play">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 3 — School Quiz</div>
+      <p>Conducted quiz and drawing competitions to engage students in water-saving ideas.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="quiz">
+        <img src="https://images.pexels.com/photos/207694/pexels-photo-207694.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="prizes">
+        <img src="https://images.pexels.com/photos/207690/pexels-photo-207690.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="drawings">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 4 — Door-to-door Visits</div>
+      <p>Volunteers visited households to reinforce messages and help with queries.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/373882/pexels-photo-373882.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="outreach">
+        <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="ladle">
+        <img src="https://images.pexels.com/photos/45170/pexels-photo-45170.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="family">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 5 — Rally</div>
+      <p>Organised a short rally with slogans promoting treatment and safe storage.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/327821/pexels-photo-327821.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="rally">
+        <img src="https://images.pexels.com/photos/327821/pexels-photo-327821.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="slogans">
+        <img src="https://images.pexels.com/photos/327821/pexels-photo-327821.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="crowd">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 6 — Monitoring Adoption</div>
+      <p>Checked sample households for adoption of safe practices and corrected mistakes.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184314/pexels-photo-3184314.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="monitoring">
+        <img src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="notes">
+        <img src="https://images.pexels.com/photos/3184190/pexels-photo-3184190.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="checklist">
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-title">Day 7 — Campaign Wrap-up</div>
+      <p>Gathered feedback, measured reach and prepared materials to hand to the village council.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="wrap-up">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="community">
+        <img src="https://images.pexels.com/photos/4392153/pexels-photo-4392153.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="feedback">
+      </div>
+    </div>
+  </div>
+  <div class="upload"><label>Add one weekly picture: </label> <input type="file" accept="image/*"></div>
+</section>
+
+<!-- WEEK 6 -->
+<section id="week6">
+  <button class="close-btn" onclick="closeSection()">×</button>
+  <h2>Week 6 — Review, Reporting & Handover (Daily)</h2>
+  <p>Final week: compile data, create simple charts, present findings and hand over materials to local leaders.</p>
+  <div class="days-grid">
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 1 — Data Compilation</div>
+      <p>Collected logs, attendance sheets, and photos to compile final report.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/260024/pexels-photo-260024.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="compilation">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="notes">
+        <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="files">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 2 — Charts & Visuals</div>
+      <p>Prepared easy charts to show improvements in water quality and household adoption rates.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="charts">
+        <img src="https://images.pexels.com/photos/669618/pexels-photo-669618.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="presentation">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="graphs">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 3 — Rehearsal</div>
+      <p>Practised presentation and finalised the handover notes for village leaders.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3760066/pexels-photo-3760066.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="rehearsal">
+        <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="practice">
+        <img src="https://images.pexels.com/photos/3760068/pexels-photo-3760068.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="notes">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 4 — Community Presentation</div>
+      <p>Presented results to the gram panchayat, school and residents; discussed sustainability plans.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="presentation">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="audience">
+        <img src="https://images.pexels.com/photos/4392153/pexels-photo-4392153.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="discussion">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 5 — Handover</div>
+      <p>Handed over binder, spare parts and simple guidelines to the village water committee.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="handover">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="leaders">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="group">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 6 — Recognition</div>
+      <p>Acknowledged volunteers and community champions; distributed certificates and took group photos.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="certificates">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="group photo">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="volunteers">
+      </div>
+    </div>
+    <div class="day-card accent-pink">
+      <div class="day-title">Day 7 — Final Notes</div>
+      <p>Documented lessons learned and recommended periodic checks, volunteer rotation and maintenance plans.</p>
+      <div class="day-images">
+        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="notes">
+        <img src="https://images.pexels.com/photos/5216053/pexels-photo-5216053.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="plan">
+        <img src="https://images.pexels.com/photos/4392153/pexels-photo-4392153.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="next steps">
+      </div>
+    </div>
+  </div>
+  <div class="upload"><label>Add one weekly picture: </label> <input type="file" accept="image/*"></div>
+</section>
+
+<!-- CONCLUSION -->
+<section id="conclusion">
+  <button class="close-btn" onclick="closeSection()">×</button>
+  <h2>Conclusion</h2>
+  <p>The project successfully set up community monitoring, introduced household treatment and safe storage practices, protected water sources and conducted awareness campaigns. Local volunteers are now equipped to continue monitoring and maintain safe drinking water practices for the village.</p>
+</section>
+
+  </div>  <script>
+    function showSection(id){document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));const el=document.getElementById(id);if(el)el.classList.add('active');document.body.style.overflow='hidden'}
+    function closeSection(){document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));document.body.style.overflow=''}
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSection()});
+  </script></body>
+</html>
